@@ -56,11 +56,9 @@ namespace ChallengesWithTestsMark8
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
             // Check if the given side lengths can form a triangle
-            bool canFormTriangle = (sideLength1 + sideLength2 > sideLength3) &&
-                                   (sideLength1 + sideLength3 > sideLength2) &&
-                                   (sideLength2 + sideLength3 > sideLength1);
-
-            return canFormTriangle;
+             return (sideLength1 + sideLength2 > sideLength3) &&
+                    (sideLength1 + sideLength3 > sideLength2) &&
+                    (sideLength2 + sideLength3 > sideLength1);
         }
 
         public bool IsStringANumber(string input)
@@ -118,9 +116,10 @@ namespace ChallengesWithTestsMark8
             }
 
             // Calculate the average (handle division by zero)
-            double average = count > 0 ? (double)sum / count : 0.0;
+             double average = count > 0 ? (double)sum / count : 0.0;
 
             return average;
+          
         }
 
         public int Factorial(int number)
